@@ -3,12 +3,14 @@ package dio.me.edu.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.DynamicUpdate;
 
 import java.io.Serializable;
 import java.util.List;
 
 @Getter
 @Setter
+@DynamicUpdate
 @Entity
 public class User implements Serializable {
     @Id

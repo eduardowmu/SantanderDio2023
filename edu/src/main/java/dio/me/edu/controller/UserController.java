@@ -3,7 +3,6 @@ package dio.me.edu.controller;
 import dio.me.edu.dto.UserDTO;
 import dio.me.edu.mapper.UserMapper;
 import dio.me.edu.service.UserService;
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

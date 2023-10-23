@@ -32,4 +32,6 @@ public class GlobalExceptionHandler {
         logger.error(unexpectedException.getMessage());
         return new ResponseEntity<>("Unexpected error", HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+
 }

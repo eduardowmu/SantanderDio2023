@@ -21,10 +21,11 @@ public class UserServiceImpl implements UserService {
         this.userMapper = userMapper;
     }
 
+    @Override
     public User save(UserDTO userDTO) {
-        if(userDTO.getId() != null) {
-            Optional<User> optionalUser = this.findById(userDTO.getId());
-            return this.userRepository.save(optionalUser.get());
+        Optional<User> optionalUser = this.findById(userDTO.getId());
+        if(optionalUser != null && optionalUser.isPresent()) {
+            throw new IllegalArgumentException("Numero de conta já existente");
         }
         return this.userRepository.save(this.userMapper.toUser(userDTO));
     }

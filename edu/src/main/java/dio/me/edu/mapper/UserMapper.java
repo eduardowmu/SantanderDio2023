@@ -9,17 +9,17 @@ import org.mapstruct.Mapping;
 public interface UserMapper {
     @Mapping(target = "id", expression = "java(userDTO.getId())")
     @Mapping(target = "name", expression = "java(userDTO.getName())")
-    @Mapping(target = "id", expression = "java(userDTO.getAccount())")
-    @Mapping(target = "id", expression = "java(userDTO.getCard())")
-    @Mapping(target = "id", expression = "java(userDTO.getNews())")
-    @Mapping(target = "id", expression = "java(userDTO.getFeatureList())")
+    @Mapping(target = "account", expression = "java(userDTO.getAccount())")
+    @Mapping(target = "card", expression = "java(userDTO.getCard())")
+    @Mapping(target = "news", expression = "java(userDTO.getNews())")
+    @Mapping(target = "featureList", expression = "java(userDTO.getFeatureList())")
     User toUser(UserDTO userDTO);
 
     @Mapping(target = "id", expression = "java(user.getId())")
     @Mapping(target = "name", expression = "java(user.getName())")
-    @Mapping(target = "id", expression = "java(user.getAccount())")
-    @Mapping(target = "id", expression = "java(user.getCard())")
-    @Mapping(target = "id", expression = "java(user.getNews())")
-    @Mapping(target = "id", expression = "java(user.getFeatureList())")
+    @Mapping(target = "account", expression = "java(user.getAccount())")
+    @Mapping(target = "card", expression = "java(user.getCard())")
+    @Mapping(target = "news", expression = "java(user.getNews())")
+    @Mapping(target = "featureList", expression = "java(user.getFeatureList())")
     UserDTO toUserDTO(User user);
 }
